@@ -1,0 +1,33 @@
+<html>
+
+<script>
+    function errorAlert(){
+        let numCheck = true
+        if (A.value == ""){
+            num1Err.style.visibility = "visible"
+            numCheck = false
+        }
+        else{
+            num1Err.style.visibility = "hidden"
+        }
+        if (B.value == ""){
+            num2Err.style.visibility = "visible"
+            numCheck = false
+        }
+        else{
+            num2Err.style.visibility = "hidden"
+        }
+        return numCheck
+    }
+
+</script>
+
+<form action="http://localhost:5000/data" method="POST" onsubmit="return errorAlert()">
+
+    Enter First Number:<input id="A" type="text" name="num1"><span id="num1Err" style="color:red;visibility:hidden"> Please enter 1st number</span><br>
+    Enter Second Number:<input id="B" type="text" name="num2"><span id="num2Err" style="color:red;visibility:hidden"> Please enter 2nd number</span><br>
+
+    <input type="Submit" value="Ok">
+
+</form>
+</html>

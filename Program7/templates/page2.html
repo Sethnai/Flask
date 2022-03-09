@@ -1,0 +1,11 @@
+<html>
+    <h2> <center> Times Table of <b>{{TimesTable}} </b><br>
+    Select range
+    <br>
+    <br>
+
+    {% for i in range(1,100) %} 
+        <a href="http://localhost:5000/page3/{{TimesTable}}/{{i}}"> {{i}} </a> <br>
+    {%endfor%}
+    </center></h2>
+</html>
